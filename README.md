@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Problema dos Filósofos Jantando</title>
 </head>
 <body>
     <h1> Problema dos Filósofos Jantando — Simulação de Concorrência com Threads</h1>
