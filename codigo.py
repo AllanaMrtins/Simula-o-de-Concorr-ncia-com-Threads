@@ -2,15 +2,15 @@ import threading #execução simultanea no caso as threads
 import time # controla o tempo e simulação de espera
 import random #gera valores aleatorios
 
-NUMERO_DE_FILOSOFOS = 5 #qtd de filosfos na mesa
+NUMERO_DE_FILOSOFOS = 5 
 
-#criando os garfos que sao os recursos compartilhados
+#criando os garfos
 garfos = [threading.Lock() for i in range(NUMERO_DE_FILOSOFOS)]
 
 #semaforo para evitar deadlock 
 semaforo = threading.Semaphore(NUMERO_DE_FILOSOFOS - 1)
 
-#funncao que representa cada filosofo 
+#funcao que representa cada filosofo 
 def run(filosofo,semaforo, mutex, tempos):
     print(f"Filósofo {filosofo['nome']} chegou à mesa")
 
@@ -18,28 +18,26 @@ def run(filosofo,semaforo, mutex, tempos):
     inicio_tempo = time.time()
     
     while True:
-        #nao usa recursos compartilhados
         print(f"Filosofo {filosofo['nome']} esta pensando")
 
         #espera um tempo aleatorio simulando pensamento
         time.sleep(random.uniform(1, 3))
 
-        #avisa que quer comer
+        #avisa que parou de pesar é agora que comer
         print(f"Filosofo {filosofo['nome']} quer comer")
 
         semaforo.acquire() #entra no semaforo
-        esquerda = filosofo["id"] #define garfo da esquerda
+        esquerda = filosofo["id"] 
 
         #define o garfo da direita para circular na mesa
         direita = (filosofo["id"] + 1) % NUMERO_DE_FILOSOFOS    
 
-        #garfo equerda bloquia bloquaia o acesso de outros
+        #garfo equerda bloqueia o acesso de outros
         with mutex[esquerda]:
 
             #pega o garfo da direita
             with mutex[direita]:
 
-                #filosofo comendo agora
                 print(f'Filosofo{filosofo["nome"]} esta comendo')
 
                 time.sleep(random.uniform(1,2))
@@ -96,6 +94,6 @@ def main():
         print(f'{nome} demorou {tempo:2f} segundos')
 
 
-#executando o prorama principal
+#executando o programa principal
 if __name__ == "__main__":
     main()
