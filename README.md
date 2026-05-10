@@ -85,10 +85,10 @@ Filósofo Aristóteles está comendo
     <hr>
     <h2>Autores</h2>
     <ul>
-        <li>Allana de Sousa Martins</li>
+        <li>Allana Camily de Sousa Martins</li>
         <li>Janiele de Jesus Barbosa</li>
         <li>Jose Henrique dos Santos Reis</li>
-        <li> Lucas Goncalves de Jesus Pereira</li>
+        <li> Lucas Gonçalves de Jesus Pereira</li>
     </ul>
     <hr>
     <h2>Aprendizados</h2>
