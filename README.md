@@ -88,7 +88,7 @@ Filósofo Aristóteles está comendo
         <li>Allana Camily de Sousa Martins</li>
         <li>Janiele de Jesus Barbosa</li>
         <li>Jose Henrique dos Santos Reis</li>
-        <li> Lucas Gonçalves de Jesus Pereira</li>
+        <li>Lucas Gonçalves de Jesus Pereira</li>
     </ul>
     <hr>
     <h2>Aprendizados</h2>
