@@ -47,7 +47,8 @@
 filosofos-jantando/
 │
 ├── codigo.py
-└── README.html
+├── README.html
+└──Relatorio_Simulacao_de_Concorrencia_com_Threads.pdf 
     </pre>
     <hr>
     <h2>Como Executar</h2>
